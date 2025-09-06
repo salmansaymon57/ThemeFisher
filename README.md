@@ -27,20 +27,17 @@ npm install
 
 
 
-# Environment Variables:
+#### Environment Variables:
 
 Create a .env.local file in the root directory.
-Add the following:NEXT_PUBLIC_GITHUB_TOKEN=your_personal_access_token_here
+Add the following: NEXT_PUBLIC_GITHUB_TOKEN=your_personal_access_token_here
 
 
-Reasoning: The NEXT_PUBLIC_GITHUB_TOKEN authenticates API requests to GitHub. The NEXT_PUBLIC_ prefix makes it accessible on the client side for simplicity, though in production, consider a server-side API route for security.
+##### Reasoning: The NEXT_PUBLIC_GITHUB_TOKEN authenticates API requests to GitHub. The NEXT_PUBLIC_ prefix makes it accessible on the client side for simplicity, though in production, consider a server-side API route for security.
 
 
-Run the Development Server:
+#### Run the Development Server:
 npm run dev
-
-
-Access the app at http://localhost:3000. ✅
 
 
 
