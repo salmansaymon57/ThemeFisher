@@ -100,7 +100,7 @@ Tailwind provides rapid development and consistency across components.
 
 **sanitize-html:**  A package for sanitizing HTML and preventing Cross-Site Scripting (XSS) attacks by stripping out malicious code from user inputs.
 #### Reasoning: 
-Essential for securely handling user-generated content, ensuring only safe text is processed and published. Installed via - [npm install sanitize-html]. 
+Essential for securely handling user-generated content, ensuring only safe text is processed and published. Installed via [install](https://www.npmjs.com/package/sanitize-html). 
 
 
 **Next.js App Router:** Employs server-side rendering and Server Actions for a fully server-side experience.
