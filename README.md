@@ -1,48 +1,107 @@
-# ThemeFisher
-This repository is specifically designated for a project that requires publishing Markdown files, where the task involves creating, managing and committing these files to the repository using the GitHub API.
+#  Markdown Post Manager
+This project is a Next.js application designed to create, manage, and publish Markdown files to a GitHub repository. It serves as a front-end development exercise utilizing TypeScript, Tailwind CSS, and server-side rendering (SSR) with the Next.js App Router. The application allows users to draft posts, edit or delete them, and publish them as Markdown files to a specified GitHub repository.
+ Project Setup
+ Prerequisites
+
+# Node.js: Version 18.x or later is recommended. Download here
+Git: For version control and cloning the repository. Install Git
+GitHub Account: To host the target repository and generate a personal access token.
+
+# Installation
+
+# Clone the Repository:
+git clone <your-repository-url>
+cd <repository-name>
+
+
+# Install Dependencies:
+npm install
+
+
+# Key dependencies include:
+next: For the Next.js framework.
+react and react-dom: For building the user interface.
+sanitize-html: To sanitize user inputs and prevent XSS attacks.
+axios: For HTTP requests (though native fetch is used in this setup).
 
 
 
 
-E-Commerce Website
-This project is an e-commerce website built using Next.js, Redux Toolkit, and custom APIs to manage products and user authentication. Below is an overview of the development process, the APIs created, and their integration.
+# Environment Variables:
 
-Overview
-A fully functional e-commerce website with the following key features:
+Create a .env.local file in the root directory.
+Add the following:NEXT_PUBLIC_GITHUB_TOKEN=your_personal_access_token_here
 
-Product listing and categorization (e.g., dashboard, products page).
-User authentication (login and sign-up functionality).
-Cart and order management (integrated into the dashboard).
-Responsive design with a carousel for featured products.
-The development process included setting up a client-side application with Next.js, managing state with Redux, and integrating custom APIs to handle data models for products and users. All development adhered to the rules and regulations outlined in the task PDF, ensuring compliance with specified guidelines.
 
-APIs Created
-Two APIs were designed and implemented to support the e-commerce functionality:
+Reasoning: The NEXT_PUBLIC_GITHUB_TOKEN authenticates API requests to GitHub. The NEXT_PUBLIC_ prefix makes it accessible on the client side for simplicity, though in production, consider a server-side API route for security.
 
-Products API
 
-Purpose: Manages product data, including titles, categories, prices, and availability.
-Endpoint: https://6852e9e20594059b23cf9776.mockapi.io/products/v1/products
-Integration: The useGetProductsQuery hook from store/services/productsApi.ts fetches product data and is integrated into src/app/products/page.tsx for product listings and src/app/page.tsx for the carousel.
-Link: Products API Implementation
-Users API
-
-Purpose: Handles user authentication, including sign-up and login functionality, with user details like name, email, password, and address.
-Endpoint: https://6852e9e20594059b23cf9776.mockapi.io/products/v1/Users
-Integration: The useSignUpMutation and useLoginQuery hooks from store/services/usersApi.ts are integrated into src/app/page.tsx for authentication forms and src/app/dashboard/page.tsx for user data display after login.
-Link: Users API Implementation
-Integration Details
-Products Integration: The useGetProductsQuery hook retrieves product data asynchronously and renders it using the ProductCard component. Filtering by category is implemented in src/app/products/page.tsx using useSearchParams, wrapped in a Suspense boundary for optimal loading.
-Users Integration: The useSignUpMutation and useLoginQuery hooks manage user registration and login. After a successful login, the setCredentials action updates the Redux state, redirecting users to the dashboard (src/app/dashboard/page.tsx), where user data (e.g., name, email, address) is displayed.
-State Management: Redux Toolkit ensures state consistency across components, with authSlice handling authentication state and cart managing cart items.
-Development Process
-Setup: Initialized a Next.js project with client-side rendering ("use client") and integrated Redux with ReduxProviderWrapper.
-API Development: Created productsApi and usersApi in store/services/ with endpoints for CRUD operations and authentication.
-Component Integration: Developed components like Navbar, Footer, ProductCard, and CarouselWrapper, linking them with API data.
-Authentication Flow: Implemented sign-up and login forms in src/app/page.tsx, with dashboard integration in src/app/dashboard/page.tsx to display user-specific data.
-Testing: Tested navigation (using Link from next/link), API responses, and state updates on https://e-commerce-next-js-swym.vercel.app/
-Deployment : Deployed the application to a live server at https://e-commerce-next-js-swym.vercel.app/.
-Getting Started
-First, run the development server:
-
+Run the Development Server:
 npm run dev
+
+
+Access the app at http://localhost:3000. ✅
+
+
+
+# Project Structure
+
+/app: Contains Next.js App Router pages (e.g., page.tsx for the main page).
+/components: Houses reusable components (e.g., PostForm.tsx, DraftList.tsx).
+/utils.ts: Stores utility functions like input sanitization and GitHub publishing logic.
+Reasoning: This structure separates concerns—pages for routing, components for UI, and utils for logic—enhancing maintainability and scalability.
+
+# Usage
+
+View Markdown Content:
+
+The homepage displays Markdown content fetched from contents/hello.md in the salmansaymon57/seo-page1 repository.
+
+
+Create a New Post:
+
+Enter a title and body in the form.
+Click "Add Draft" to save the draft to the server-side list.
+
+
+Manage Drafts:
+
+View the list of drafts below the form.
+Click "Edit" to update a draft (submits the current values for simplicity).
+Click "Delete" to remove a draft.
+
+
+Publish Drafts:
+
+Click "Publish All" to commit all drafts as Markdown files to the GitHub repository.
+Drafts are cleared after successful publishing.
+
+
+Error Handling:
+
+Errors (e.g., missing token, failed publish) are displayed on the page with details logged to the console.
+
+
+
+# Additional Tools and Libraries
+
+Tailwind CSS: Used for styling to ensure a responsive and clean UI with minimal custom CSS.
+Reasoning: Tailwind provides rapid development and consistency across components. 🌟
+
+
+sanitize-html: Integrates security by sanitizing user inputs to prevent XSS.
+Reasoning: Essential for safely handling user-generated content in a public-facing app. 🔒
+
+
+Next.js App Router: Employs server-side rendering and Server Actions for a fully server-side experience.
+Reasoning: Avoids client-side JavaScript where possible, aligning with your preference, and leverages SSR for SEO and performance. 🚀
+
+
+
+# Reasoning Behind Design Choices
+
+Server-Side Rendering: Chosen to avoid client-side state management (useState, "use client"), ensuring all logic runs on the server. This uses Server Actions and revalidatePath to update the UI.
+GitHub Integration: The project targets salmansaymon57/seo-page1 for publishing, using the GitHub API’s contents endpoint, reflecting a real-world use case for content management.
+Security: Input sanitization protects against malicious code, critical for user-submitted data.
+Accessibility: ARIA labels and roles
+Simplicity: The in-memory serverDrafts array simplifies state management without a database, suitable for this exercise.
