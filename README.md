@@ -10,10 +10,10 @@ This project is a Next.js application designed to create, manage, and publish Ma
 ### Installation
 
 1. **Clone the Repository:**
-```bash:disable-run
+```
 git clone <your-repository-url>
 cd <repository-name>
-```bash:disable-run
+```
 
 
 #### Install Dependencies:
