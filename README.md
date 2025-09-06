@@ -94,25 +94,22 @@ Errors (e.g., missing token, failed publish) are displayed on the page with deta
 # Additional Tools and Libraries
 
 **Tailwind CSS:** Used for styling to ensure a responsive and clean UI with minimal custom CSS.
-#### Reasoning: 
-Tailwind provides rapid development and consistency across components. 
+***Reasoning:*** Tailwind provides rapid development and consistency across components. 
 
 
 **sanitize-html:**  A package for sanitizing HTML and preventing Cross-Site Scripting (XSS) attacks by stripping out malicious code from user inputs.
-#### Reasoning: 
-Essential for securely handling user-generated content, ensuring only safe text is processed and published. Installed via [install](https://www.npmjs.com/package/sanitize-html). 
+***Reasoning:*** Essential for securely handling user-generated content, ensuring only safe text is processed and published. Installed via [install](https://www.npmjs.com/package/sanitize-html). 
 
 
 **Next.js App Router:** Employs server-side rendering and Server Actions for a fully server-side experience.
-#### Reasoning: 
-Avoids client-side JavaScript where possible, aligning with your preference, and leverages SSR for SEO and performance. 
+***Reasoning:*** Avoids client-side JavaScript where possible, aligning with your preference, and leverages SSR for SEO and performance. 
 
 
 
 # Reasoning Behind Design Choices
 
-**Server-Side Rendering:** Chosen to avoid client-side state management (useState, "use client"), ensuring all logic runs on the server. This uses Server Actions and revalidatePath to update the UI.
-**GitHub Integration:** The project targets salmansaymon57/ThemeFisher for publishing, using the GitHub API’s contents endpoint, reflecting a real-world use case for content management.
-**Security:** Input sanitization protects against malicious code, critical for user-submitted data.
-**Accessibility:** ARIA labels and roles
-**Simplicity:** The in-memory serverDrafts array simplifies state management without a database, suitable for this exercise.
+* **Server-Side Rendering:** Chosen to avoid client-side state management (useState, "use client"), ensuring all logic runs on the server. This uses Server Actions and revalidatePath to update the UI.
+* **GitHub Integration:** The project targets salmansaymon57/ThemeFisher for publishing, using the GitHub API’s contents endpoint, reflecting a real-world use case for content management.
+* **Security:** Input sanitization protects against malicious code, critical for user-submitted data.
+* **Accessibility:** ARIA labels and roles
+* **Simplicity:** The in-memory serverDrafts array simplifies state management without a database, suitable for this exercise.
