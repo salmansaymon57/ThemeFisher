@@ -52,31 +52,31 @@ This structure separates concerns—pages for routing, components for UI, and ut
 
 # Usage
 
-## View Markdown Content:
+### View Markdown Content:
 
 The homepage displays Markdown content fetched from contents/README.md in the salmansaymon57/ThemeFisher repository.
 
 
-## Create a New Post:
+### Create a New Post:
 
 Enter a title and body in the form.
 Click "Add Draft" to save the draft to the server-side list.
 
 
-## Manage Drafts:
+### Manage Drafts:
 
 View the list of drafts below the form.
 Click "Edit" to update a draft (submits the current values for simplicity).
 Click "Delete" to remove a draft.
 
 
-## Publish Drafts:
+### Publish Drafts:
 
 Click "Publish All" to commit all drafts as Markdown files to the GitHub repository.
 Drafts are cleared after successful publishing.
 
 
-## Error Handling:
+### Error Handling:
 
 Errors (e.g., missing token, failed publish) are displayed on the page with details logged to the console.
 
@@ -84,18 +84,18 @@ Errors (e.g., missing token, failed publish) are displayed on the page with deta
 
 # Additional Tools and Libraries
 
-## Tailwind CSS: Used for styling to ensure a responsive and clean UI with minimal custom CSS.
-### Reasoning: 
+### Tailwind CSS: Used for styling to ensure a responsive and clean UI with minimal custom CSS.
+#### Reasoning: 
 Tailwind provides rapid development and consistency across components. 🌟
 
 
-## sanitize-html: Integrates security by sanitizing user inputs to prevent XSS.
-### Reasoning: 
+### sanitize-html: Integrates security by sanitizing user inputs to prevent XSS.
+#### Reasoning: 
 Essential for safely handling user-generated content in a public-facing app. 🔒
 
 
-## Next.js App Router: Employs server-side rendering and Server Actions for a fully server-side experience.
-### Reasoning: 
+### Next.js App Router: Employs server-side rendering and Server Actions for a fully server-side experience.
+#### Reasoning: 
 Avoids client-side JavaScript where possible, aligning with your preference, and leverages SSR for SEO and performance. 🚀
 
 
