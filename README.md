@@ -13,6 +13,7 @@ This project is a Next.js application designed to create, manage, and publish Ma
 ```bash:disable-run
 git clone <your-repository-url>
 cd <repository-name>
+```bash:disable-run
 
 
 #### Install Dependencies:
