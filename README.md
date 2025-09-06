@@ -53,9 +53,9 @@ npm run dev
 
 # Project Structure
 
-* app: Contains Next.js App Router pages (e.g., page.tsx for the main page).
-* components: Houses reusable components (e.g., PostForm.tsx, DraftList.tsx).
-* utils.ts: Stores utility functions like input sanitization and GitHub publishing logic.
+* ***app:*** Contains Next.js App Router pages (e.g., page.tsx for the main page).
+* ***components:*** Houses reusable components (e.g., PostForm.tsx, DraftList.tsx).
+* ***utils.ts:*** Stores utility functions like input sanitization and GitHub publishing logic.
 * ***Reasoning:*** 
 This structure separates concerns pages for routing, components for UI, and utils for logic enhancing maintainability and scalability.
 
