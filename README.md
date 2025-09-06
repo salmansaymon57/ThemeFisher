@@ -3,26 +3,26 @@ This project is a Next.js application designed to create, manage, and publish Ma
 ## Project Setup
 ### Prerequisites
 
-# Node.js: Version 18.x or later is recommended. Download here
-Git: For version control and cloning the repository. Install Git
-GitHub Account: To host the target repository and generate a personal access token.
+#### Node.js: Version 18.x or later is recommended. Download here
+#### Git: For version control and cloning the repository. Install Git
+#### GitHub Account: To host the target repository and generate a personal access token.
 
-## Installation
+### Installation
 
-## 1. Clone the Repository:
+#### 1. Clone the Repository:
 git clone <your-repository-url>
 cd <repository-name>
 
 
-# Install Dependencies:
+#### Install Dependencies:
 npm install
 
 
-# Key dependencies include:
-next: For the Next.js framework.
-react and react-dom: For building the user interface.
-sanitize-html: To sanitize user inputs and prevent XSS attacks.
-axios: For HTTP requests (though native fetch is used in this setup).
+* Key dependencies include:
+* next: For the Next.js framework.
+* react and react-dom: For building the user interface.
+* sanitize-html: To sanitize user inputs and prevent XSS attacks.
+* axios: For HTTP requests (though native fetch is used in this setup).
 
 
 
