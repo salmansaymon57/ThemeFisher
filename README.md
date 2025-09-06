@@ -1,5 +1,5 @@
 #  Markdown Post Manager
-This project is a Next.js application designed to create, manage, and publish Markdown files to a GitHub repository. It serves as a front-end development exercise utilizing TypeScript, Tailwind CSS, and server-side rendering (SSR) with the Next.js App Router. The application allows users to draft posts, edit or delete them, and publish them as Markdown files to a specified GitHub repository.
+This project is a **Next.js application** designed to create, manage, and publish **Markdown files** to a **GitHub repository**. It serves as a **front-end development exercise** utilizing **TypeScript**, **Tailwind CSS**, and **server-side rendering (SSR)** with the **Next.js App Router**. The application allows users to **draft posts**, **edit or delete them**, and **publish them as Markdown** files to a specified GitHub repository.
 ## Project Setup
 ### Prerequisites
 
@@ -16,8 +16,10 @@ cd <repository-name>
 ```
 
 
-#### Install Dependencies:
+2. **Install Dependencies:**
+```
 npm install
+```
 
 
 * Key dependencies include:
@@ -29,18 +31,19 @@ npm install
 
 
 
-#### Environment Variables:
+3. **Environment Variables:**
 
 Create a .env.local file in the root directory.
+```
 Add the following: NEXT_PUBLIC_GITHUB_TOKEN=your_personal_access_token_here
-
+```
 
 ##### Reasoning: 
 The NEXT_PUBLIC_GITHUB_TOKEN authenticates API requests to GitHub. The NEXT_PUBLIC_ prefix makes it accessible on the client side for simplicity, though in production, consider a server-side API route for security.
 
 
-#### Run the Development Server:
-npm run dev
+4. **Run the Development Server:**
+```npm run dev```
 
 
 
