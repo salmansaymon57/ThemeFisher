@@ -1,6 +1,8 @@
 #  Markdown Post Manager
 This project is a **Next.js application** designed to create, manage, and publish **Markdown files** to a **GitHub repository**. It serves as a **front-end development exercise** utilizing **TypeScript**, **Tailwind CSS**, and **server-side rendering (SSR)** with the **Next.js App Router**. The application allows users to **draft posts**, **edit or delete them**, and **publish them as Markdown** files to a specified GitHub repository.
+
 ## Project Setup
+
 ### Prerequisites
 
 - [Download here](https://nodejs.org/) **Node.js**: Version 18.x or later is recommended. Download here
@@ -98,7 +100,7 @@ Tailwind provides rapid development and consistency across components.
 
 **sanitize-html:**  A package for sanitizing HTML and preventing Cross-Site Scripting (XSS) attacks by stripping out malicious code from user inputs.
 #### Reasoning: 
-Essential for securely handling user-generated content, ensuring only safe text is processed and published. Installed via npm install sanitize-html. 
+Essential for securely handling user-generated content, ensuring only safe text is processed and published. Installed via - [npm install sanitize-html]. 
 
 
 **Next.js App Router:** Employs server-side rendering and Server Actions for a fully server-side experience.
